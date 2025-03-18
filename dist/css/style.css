@@ -1387,7 +1387,7 @@ form.form input[type=submit] {
   width: 13.125rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  border: 5px solid #fff;
+  border: 5px solid red;
   margin-bottom: 1.375rem
 }
 .jury__avatar>img,
@@ -1395,14 +1395,16 @@ form.form input[type=submit] {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover
+  object-fit: cover;
+  border-radius: 50%
 }
 .jury__avatar picture img,
 .jury__avatar picture source {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover
+  object-fit: cover;
+  border-radius: 50%
 }
 .voting {
   padding-bottom: 5.9375rem
@@ -1461,7 +1463,8 @@ form.form input[type=submit] {
 .voting__slide {
   aspect-ratio: 1175/678;
   border-radius: 1.25rem;
-  overflow: hidden
+  overflow: hidden;
+  min-height: 15rem
 }
 .voting__slide>img,
 .voting__slide>picture {
@@ -2424,6 +2427,9 @@ form.form input[type=submit] {
   }
 }
 @media (max-width:47.99875em) {
+  .popup__content {
+    padding: 2.1875rem 1.5625rem 3.125rem 1.5625rem
+  }
   .spollers {
     gap: .6875rem
   }
@@ -2490,6 +2496,16 @@ form.form input[type=submit] {
   }
   .hero__button {
     width: 100%
+  }
+  .about__container h2>img,
+  .about__container h2>picture {
+    right: -5rem;
+    bottom: .625rem
+  }
+  .about__container h2 picture img,
+  .about__container h2 picture source {
+    right: -5rem;
+    bottom: .625rem
   }
   .about__decor-1,
   .about__decor-3 {

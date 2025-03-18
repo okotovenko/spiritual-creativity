@@ -386,6 +386,11 @@
                     return;
                 }
             }.bind(this));
+            document.querySelectorAll(".checkbox__label").forEach((label => {
+                label.addEventListener("click", (event => {
+                    event.stopPropagation();
+                }));
+            }));
             document.addEventListener("keydown", function(e) {
                 if (this.options.closeEsc && e.which == 27 && e.code === "Escape" && this.isOpen) {
                     e.preventDefault();
