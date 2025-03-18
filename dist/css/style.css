@@ -1387,7 +1387,7 @@ form.form input[type=submit] {
   width: 13.125rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  border: 5px solid red;
+  border: 5px solid #fff;
   margin-bottom: 1.375rem
 }
 .jury__avatar>img,

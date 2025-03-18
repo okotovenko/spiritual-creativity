@@ -386,8 +386,13 @@
                     return;
                 }
             }.bind(this));
-            document.querySelectorAll(".checkbox__label").forEach((label => {
-                label.addEventListener("click", (event => {
+            document.querySelectorAll(".checkbox").forEach((checkbox => {
+                checkbox.addEventListener("click", (event => {
+                    if (!event.target.classList.contains("checkbox__input")) {
+                        event.preventDefault();
+                        const input = checkbox.querySelector(".checkbox__input");
+                        input.checked = !input.checked;
+                    }
                     event.stopPropagation();
                 }));
             }));
