@@ -299,10 +299,35 @@ body::after {
   display: grid;
   gap: 1.375rem
 }
+.spollers :nth-child(1).spollers__item.animation {
+  -webkit-animation: left .2s .3s linear both;
+  animation: left .2s .3s linear both
+}
+.spollers :nth-child(2).spollers__item.animation {
+  -webkit-animation: left .2s .4s linear both;
+  animation: left .2s .4s linear both
+}
+.spollers :nth-child(3).spollers__item.animation {
+  -webkit-animation: left .2s .5s linear both;
+  animation: left .2s .5s linear both
+}
+.spollers :nth-child(4).spollers__item.animation {
+  -webkit-animation: left .2s .6s linear both;
+  animation: left .2s .6s linear both
+}
+.spollers :nth-child(5).spollers__item.animation {
+  -webkit-animation: left .2s .7s linear both;
+  animation: left .2s .7s linear both
+}
+.spollers :nth-child(6).spollers__item.animation {
+  -webkit-animation: left .2s .8s linear both;
+  animation: left .2s .8s linear both
+}
 .spollers__item {
   background-color: #f8f8f8;
   border-radius: 1.25rem;
-  transition: all .3s ease 0s
+  transition: all .3s ease 0s;
+  opacity: 0
 }
 .spollers__item[open] {
   box-shadow: 0 0 50px 10px rgba(0,0,0,.05);
@@ -441,6 +466,54 @@ body::after {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain
+}
+@-webkit-keyframes left {
+  0% {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+    opacity: 0
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1
+  }
+}
+@keyframes left {
+  0% {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+    opacity: 0
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1
+  }
+}
+@-webkit-keyframes top {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+@keyframes top {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
 }
 form.form {
   width: 100%
@@ -783,7 +856,12 @@ form.form input[type=submit] {
   line-height: 110%;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 2.125rem
+  margin-bottom: 2.125rem;
+  opacity: 0
+}
+.hero__container h1.animation {
+  -webkit-animation: left .2s .3s linear both;
+  animation: left .2s .3s linear both
 }
 .hero__decor-1 {
   left: 55%;
@@ -816,7 +894,12 @@ form.form input[type=submit] {
   padding-left: 1.5625rem;
   align-self: flex-start;
   position: relative;
-  margin-bottom: 3.75rem
+  margin-bottom: 3.75rem;
+  opacity: 0
+}
+.hero__top.animation {
+  -webkit-animation: left .2s .2s linear both;
+  animation: left .2s .2s linear both
 }
 .hero__top p {
   font-family: "Amatic SC";
@@ -851,7 +934,8 @@ form.form input[type=submit] {
   align-items: center;
   font-weight: 600;
   text-transform: uppercase;
-  color: #fff
+  color: #fff;
+  opacity: 0
 }
 .hero__content ul li>img,
 .hero__content ul li>picture {
@@ -860,6 +944,18 @@ form.form input[type=submit] {
 .hero__content ul li picture img,
 .hero__content ul li picture source {
   aspect-ratio: 1/1
+}
+.hero__content ul li:nth-child(1).animation {
+  -webkit-animation: left .2s .4s linear both;
+  animation: left .2s .4s linear both
+}
+.hero__content ul li:nth-child(2).animation {
+  -webkit-animation: left .2s .5s linear both;
+  animation: left .2s .5s linear both
+}
+.hero__content ul li:nth-child(3).animation {
+  -webkit-animation: left .2s .6s linear both;
+  animation: left .2s .6s linear both
 }
 .hero__content a {
   font-weight: 700;
@@ -875,13 +971,19 @@ form.form input[type=submit] {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
-  width: fit-content
+  width: fit-content;
+  opacity: 0
+}
+.hero__button.animation {
+  -webkit-animation: left .2s .7s linear both;
+  animation: left .2s .7s linear both
 }
 .hero__button>img,
 .hero__button>picture {
   position: absolute;
   right: -12%;
   bottom: 0;
+  z-index: 2;
   -webkit-transform: scale(-1,1);
   transform: scale(-1,1)
 }
@@ -890,6 +992,7 @@ form.form input[type=submit] {
   position: absolute;
   right: -12%;
   bottom: 0;
+  z-index: 2;
   -webkit-transform: scale(-1,1);
   transform: scale(-1,1)
 }
@@ -917,7 +1020,12 @@ form.form input[type=submit] {
   text-transform: uppercase;
   width: -webkit-fit-content;
   width: -moz-fit-content;
-  width: fit-content
+  width: fit-content;
+  opacity: 0
+}
+.about__container h2.animation {
+  -webkit-animation: left .2s .2s linear both;
+  animation: left .2s .2s linear both
 }
 .about__container h2>img,
 .about__container h2>picture {
@@ -967,13 +1075,34 @@ form.form input[type=submit] {
   text-transform: uppercase;
   margin-bottom: 2.25rem;
   width: 100%;
-  max-width: 65.625rem
+  max-width: 65.625rem;
+  opacity: 0
+}
+.about__text.animation {
+  -webkit-animation: left .2s .3s linear both;
+  animation: left .2s .3s linear both
 }
 .about__items {
   position: relative;
   gap: 2.75rem;
   display: flex;
   justify-content: space-between
+}
+.about__items :nth-child(2).about__item.animation {
+  -webkit-animation: top .2s .4s linear both;
+  animation: top .2s .4s linear both
+}
+.about__items :nth-child(3).about__item.animation {
+  -webkit-animation: top .2s .5s linear both;
+  animation: top .2s .5s linear both
+}
+.about__items :nth-child(4).about__item.animation {
+  -webkit-animation: top .2s .6s linear both;
+  animation: top .2s .6s linear both
+}
+.about__items :nth-child(5).about__item.animation {
+  -webkit-animation: top .2s .7s linear both;
+  animation: top .2s .7s linear both
 }
 .about__line {
   position: absolute;
@@ -1000,7 +1129,8 @@ form.form input[type=submit] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative
+  position: relative;
+  opacity: 0
 }
 .about__item h3 {
   font-weight: 700;
@@ -1046,7 +1176,12 @@ form.form input[type=submit] {
   font-weight: 700;
   line-height: 110%;
   text-transform: uppercase;
-  color: #fff
+  color: #fff;
+  opacity: 0
+}
+.how__container h2.animation {
+  -webkit-animation: left .2s .2s linear both;
+  animation: left .2s .2s linear both
 }
 .how__decor-1 {
   width: 3.25rem;
@@ -1076,9 +1211,22 @@ form.form input[type=submit] {
   row-gap: 3.0625rem;
   margin-bottom: 3.3125rem
 }
+.how__items :nth-child(1).how__item.animation {
+  -webkit-animation: top .2s .3s linear both;
+  animation: top .2s .3s linear both
+}
+.how__items :nth-child(2).how__item.animation {
+  -webkit-animation: top .2s .4s linear both;
+  animation: top .2s .4s linear both
+}
+.how__items :nth-child(3).how__item.animation {
+  -webkit-animation: top .2s .5s linear both;
+  animation: top .2s .5s linear both
+}
 .how__item {
   position: relative;
-  border-radius: 1.25rem
+  border-radius: 1.25rem;
+  opacity: 0
 }
 .how__item p {
   position: absolute;
@@ -1133,7 +1281,12 @@ form.form input[type=submit] {
   border-radius: 6.25rem;
   background-color: #f5d54e;
   align-self: center;
-  transition: all .3s ease 0s
+  transition: all .3s ease 0s;
+  opacity: 0
+}
+.how__button.animation {
+  -webkit-animation: top .2s .6s linear both;
+  animation: top .2s .6s linear both
 }
 .category {
   background: url(../img/category/bg-big.webp) no-repeat center/cover;
@@ -1150,7 +1303,12 @@ form.form input[type=submit] {
   line-height: 110%;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 1.5rem
+  margin-bottom: 1.5rem;
+  opacity: 0
+}
+.category__container h2.animation {
+  -webkit-animation: left .2s .3s linear both;
+  animation: left .2s .3s linear both
 }
 .category__old {
   width: 100%;
@@ -1161,7 +1319,12 @@ form.form input[type=submit] {
   padding: .75rem 0;
   border-radius: 6.25rem;
   background-color: #d26ea4;
-  margin-bottom: 4.75rem
+  margin-bottom: 4.75rem;
+  opacity: 0
+}
+.category__old.animation {
+  -webkit-animation: top .2s .3s linear both;
+  animation: top .2s .3s linear both
 }
 .category__old span {
   display: inline-block;
@@ -1185,6 +1348,14 @@ form.form input[type=submit] {
   column-gap: .875rem;
   margin-bottom: 1.875rem
 }
+.category__prizes :nth-child(1).category__prize.animation {
+  -webkit-animation: top .2s .6s linear both;
+  animation: top .2s .6s linear both
+}
+.category__prizes :nth-child(3).category__prize.animation {
+  -webkit-animation: top .2s .3s linear both;
+  animation: top .2s .3s linear both
+}
 .category__prizes :nth-child(1).category__prize p,
 .category__prizes :nth-child(3).category__prize p {
   font-weight: 700;
@@ -1196,6 +1367,10 @@ form.form input[type=submit] {
 .category__prizes :nth-child(1).category__prize span,
 .category__prizes :nth-child(3).category__prize span {
   color: #fff
+}
+.category__prizes :nth-child(2).category__prize.animation {
+  -webkit-animation: top .2s .9s linear both;
+  animation: top .2s .9s linear both
 }
 .category__prizes :nth-child(2).category__prize p {
   font-weight: 700;
@@ -1219,7 +1394,8 @@ form.form input[type=submit] {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 33.3%
+  width: 33.3%;
+  opacity: 0
 }
 .category__prize span {
   font-weight: 400;
@@ -1256,7 +1432,12 @@ form.form input[type=submit] {
   line-height: 122%;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 2.125rem
+  margin-bottom: 2.125rem;
+  opacity: 0
+}
+.category__add h3.animation {
+  -webkit-animation: top .2s .2s linear both;
+  animation: top .2s .2s linear both
 }
 .category__items {
   width: 100%;
@@ -1266,6 +1447,22 @@ form.form input[type=submit] {
   column-gap: 3rem;
   row-gap: 2.5rem;
   grid-template-columns: repeat(4,1fr)
+}
+.category__items :nth-child(1).category__item.animation {
+  -webkit-animation: top .2s .3s linear both;
+  animation: top .2s .3s linear both
+}
+.category__items :nth-child(2).category__item.animation {
+  -webkit-animation: top .2s .4s linear both;
+  animation: top .2s .4s linear both
+}
+.category__items :nth-child(3).category__item.animation {
+  -webkit-animation: top .2s .5s linear both;
+  animation: top .2s .5s linear both
+}
+.category__items :nth-child(4).category__item.animation {
+  -webkit-animation: top .2s .6s linear both;
+  animation: top .2s .6s linear both
 }
 .category__item {
   display: flex;
@@ -1316,7 +1513,19 @@ form.form input[type=submit] {
 .jury__container h2 {
   font-weight: 700;
   line-height: 110%;
-  text-transform: uppercase
+  text-transform: uppercase;
+  opacity: 0
+}
+.jury__container h2.animation {
+  -webkit-animation: top .2s .2s linear both;
+  animation: top .2s .2s linear both
+}
+.jury__container>p {
+  opacity: 0
+}
+.jury__container>p.animation {
+  -webkit-animation: top .2s .3s linear both;
+  animation: top .2s .3s linear both
 }
 .jury__container p {
   width: 100%;
@@ -1331,6 +1540,18 @@ form.form input[type=submit] {
   gap: 1.375rem;
   position: relative;
   z-index: 2
+}
+.jury__container ul :nth-child(1).jury__li.animation {
+  -webkit-animation: left .2s .4s linear both;
+  animation: left .2s .4s linear both
+}
+.jury__container ul :nth-child(2).jury__li.animation {
+  -webkit-animation: left .2s .5s linear both;
+  animation: left .2s .5s linear both
+}
+.jury__container ul :nth-child(3).jury__li.animation {
+  -webkit-animation: left .2s .6s linear both;
+  animation: left .2s .6s linear both
 }
 .jury__container ul li {
   display: flex;
@@ -1366,10 +1587,23 @@ form.form input[type=submit] {
   -moz-column-gap: .625rem;
   column-gap: .625rem
 }
+.jury__items :nth-child(1).jury__item.animation {
+  -webkit-animation: top .2s .7s linear both;
+  animation: top .2s .7s linear both
+}
+.jury__items :nth-child(2).jury__item.animation {
+  -webkit-animation: top .2s .8s linear both;
+  animation: top .2s .8s linear both
+}
+.jury__items :nth-child(3).jury__item.animation {
+  -webkit-animation: top .2s .9s linear both;
+  animation: top .2s .9s linear both
+}
 .jury__item {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  opacity: 0
 }
 .jury__item p {
   font-weight: 600;
@@ -1419,7 +1653,12 @@ form.form input[type=submit] {
   text-transform: uppercase;
   margin-bottom: 1.375rem;
   width: 100%;
-  max-width: 43.75rem
+  max-width: 43.75rem;
+  opacity: 0
+}
+.voting__container h2.animation {
+  -webkit-animation: left .2s .2s linear both;
+  animation: left .2s .2s linear both
 }
 .voting__container p {
   font-weight: 600;
@@ -1427,7 +1666,12 @@ form.form input[type=submit] {
   line-height: 122%;
   text-transform: uppercase;
   width: 100%;
-  max-width: 43.75rem
+  max-width: 43.75rem;
+  opacity: 0
+}
+.voting__container p.animation {
+  -webkit-animation: left .2s .3s linear both;
+  animation: left .2s .3s linear both
 }
 .voting__decor-1 {
   width: 12.5rem;
@@ -1521,7 +1765,12 @@ form.form input[type=submit] {
   text-transform: uppercase;
   margin-bottom: 1.375rem;
   width: 100%;
-  max-width: 43.75rem
+  max-width: 43.75rem;
+  opacity: 0
+}
+.faq__container h2.animation {
+  -webkit-animation: left .2s .3s linear both;
+  animation: left .2s .3s linear both
 }
 .contacts__container {
   display: flex;
@@ -1535,7 +1784,12 @@ form.form input[type=submit] {
   text-transform: uppercase;
   margin-bottom: 1.375rem;
   width: 100%;
-  max-width: 43.75rem
+  max-width: 43.75rem;
+  opacity: 0
+}
+.contacts__container h2.animation {
+  -webkit-animation: left .2s .2s linear both;
+  animation: left .2s .2s linear both
 }
 .contacts__left {
   display: flex;
@@ -1546,7 +1800,12 @@ form.form input[type=submit] {
   font-weight: 600;
   text-align: center;
   color: #fff;
-  margin: 0 auto
+  margin: 0 auto;
+  opacity: 0
+}
+.contacts__left>p.animation {
+  -webkit-animation: top .2s .7s linear both;
+  animation: top .2s .7s linear both
 }
 .contacts__items {
   display: flex;
@@ -1557,6 +1816,21 @@ form.form input[type=submit] {
   -moz-column-gap: 1.25rem;
   column-gap: 1.25rem;
   margin-bottom: 3.375rem
+}
+.contacts__items :nth-child(1).contacts__item.animation {
+  -webkit-animation: top .2s .3s linear both;
+  animation: top .2s .3s linear both
+}
+.contacts__items :nth-child(2).contacts__item.animation {
+  -webkit-animation: top .2s .4s linear both;
+  animation: top .2s .4s linear both
+}
+.contacts__items :nth-child(3).contacts__item.animation {
+  -webkit-animation: top .2s .5s linear both;
+  animation: top .2s .5s linear both
+}
+.contacts__item {
+  opacity: 0
 }
 .contacts__item a {
   display: flex;
@@ -1583,7 +1857,12 @@ form.form input[type=submit] {
   background: #fff;
   align-self: center;
   margin-bottom: 1.25rem;
-  border-radius: 1.25rem
+  border-radius: 1.25rem;
+  opacity: 0
+}
+.contacts__qr.animation {
+  -webkit-animation: top .2s .8s linear both;
+  animation: top .2s .8s linear both
 }
 .contacts__qr>img,
 .contacts__qr>picture {
@@ -1608,7 +1887,12 @@ form.form input[type=submit] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2.5rem 3.125rem 3.125rem 3.125rem
+  padding: 2.5rem 3.125rem 3.125rem 3.125rem;
+  opacity: 0
+}
+.contacts__right.animation {
+  -webkit-animation: left .2s .5s linear both;
+  animation: left .2s .5s linear both
 }
 .contacts__logo {
   display: flex;
