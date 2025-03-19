@@ -1521,18 +1521,16 @@ form.form input[type=submit] {
   animation: top .2s .2s linear both
 }
 .jury__container>p {
-  opacity: 0
-}
-.jury__container>p.animation {
-  -webkit-animation: top .2s .3s linear both;
-  animation: top .2s .3s linear both
-}
-.jury__container p {
+  opacity: 0;
   width: 100%;
   max-width: 60.625rem;
   font-weight: 600;
   line-height: 122%;
   text-transform: uppercase
+}
+.jury__container>p.animation {
+  -webkit-animation: top .2s .3s linear both;
+  animation: top .2s .3s linear both
 }
 .jury__container ul {
   display: flex;
@@ -2176,10 +2174,10 @@ form.form input[type=submit] {
   .jury__container h2 {
     font-size: 2.1875rem
   }
-  .jury__container p {
+  .jury__container>p {
     font-size: 1rem
   }
-  .jury__container p {
+  .jury__container>p {
     margin-bottom: 2.3125rem
   }
   .jury__container ul {
@@ -2497,10 +2495,10 @@ form.form input[type=submit] {
   .jury__container h2 {
     font-size: 1.25rem
   }
-  .jury__container p {
+  .jury__container>p {
     font-size: .75rem
   }
-  .jury__container p {
+  .jury__container>p {
     margin-bottom: 1.5625rem
   }
   .jury__container ul {
@@ -3172,10 +3170,10 @@ form.form input[type=submit] {
   .jury__container h2 {
     font-size: clamp(1.25rem ,.9199669967rem + 1.6501650165vw ,2.1875rem)
   }
-  .jury__container p {
+  .jury__container>p {
     font-size: clamp(.75rem ,.6619911991rem + .4400440044vw ,1rem)
   }
-  .jury__container p {
+  .jury__container>p {
     margin-bottom: clamp(1.5625rem ,1.2984735974rem + 1.3201320132vw ,2.3125rem)
   }
   .jury__container ul {
